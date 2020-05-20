@@ -1,0 +1,25 @@
+/*
+* === THEME ===
+*/
+
+:root{
+  --font-family: Roboto,Arial,sans-serif;
+
+  --primary: #e8eaed;
+  --secondary: #202124;
+}
+
+/*
+* === GLOBAL ===
+*/
+
+body {
+  font-family: var(--font-family);
+  color: var(--primary);
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 0;
+  min-width: 360px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
