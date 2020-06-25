@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <MainHeader />
+    <AppHeader />
     <NewNote />
     <NotesList />
   </div>
 </template>
 
 <script>
-import MainHeader from "./components/MainHeader";
+import AppHeader from "./components/header/AppHeader";
 import NewNote from "./components/NewNote";
 import NotesList from "./components/NotesList";
 
 export default {
   name: "App",
-  components: { MainHeader, NewNote, NotesList }
+  components: { AppHeader, NewNote, NotesList }
 };
 </script>
 

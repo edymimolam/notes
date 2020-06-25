@@ -2,7 +2,7 @@
   <div class="wrapper">
     <header class="header">
       <div class="container">
-        <Search />
+        <SearchBar />
       </div>
     </header>
     <div class="extender"></div>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import Search from "./Search";
+import SearchBar from "./SearchBar";
 export default {
-  name: "MainHeader",
-  components: { Search }
+  name: "AppHeader",
+  components: { SearchBar }
 };
 </script>
 
