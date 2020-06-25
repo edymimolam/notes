@@ -1,19 +1,17 @@
 <template>
   <div id="app">
     <AppHeader />
-    <NewNote />
-    <NotesList />
+    <NotesContainer />
   </div>
 </template>
 
 <script>
 import AppHeader from "./components/header/AppHeader";
-import NewNote from "./components/NewNote";
-import NotesList from "./components/NotesList";
+import NotesContainer from "./components/notes/NotesContainer";
 
 export default {
   name: "App",
-  components: { AppHeader, NewNote, NotesList }
+  components: { AppHeader, NotesContainer }
 };
 </script>
 
@@ -27,6 +25,14 @@ export default {
   box-sizing: border-box;
 }
 
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+}
+
 body {
   font-family: $font-family;
   color: $color-text-primary;
@@ -36,5 +42,9 @@ body {
   min-width: 360px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+:focus {
+  outline: none;
 }
 </style>
