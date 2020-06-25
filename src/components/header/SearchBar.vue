@@ -1,12 +1,24 @@
 <template>
   <form>
     <div class="search-bar-container">
-      <button class="buttons">Ok</button>
+      <BaseButton>
+        <BaseIcon name="search" />
+      </BaseButton>
       <input class="search-field" type="text" placeholder="Search" />
-      <button class="buttons">X</button>
+      <BaseButton>
+        <BaseIcon name="times" />
+      </BaseButton>
     </div>
   </form>
 </template>
+
+<script>
+import BaseIcon from "../base/BaseIcon";
+import BaseButton from "../base/BaseButton";
+export default {
+  components: { BaseIcon, BaseButton }
+};
+</script>
 
 <style lang="scss" scoped>
 @import "~@/design.scss";
@@ -30,15 +42,6 @@
   border: none;
 }
 .search-field::placeholder {
-  color: $color-text-primary;
-}
-.buttons {
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
   color: $color-text-primary;
 }
 </style>

@@ -24,7 +24,6 @@ export default {
 @import "~@/design.scss";
 
 .note-container {
-  justify-self: stretch;
   display: flex;
 }
 
@@ -34,6 +33,7 @@ export default {
   border: $border;
   display: flex;
   flex-flow: column;
+  height: fit-content;
 }
 
 .note-title {

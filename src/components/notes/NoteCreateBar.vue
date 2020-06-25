@@ -1,6 +1,6 @@
 <template>
   <div class="new-note-bar-container">
-    <input class="new-note-bar" placeholder="New Note..." />
+    <input class="new-note-bar" placeholder="New Note..." type="text" />
   </div>
 </template>
 
@@ -21,5 +21,8 @@
   color: $color-text-primary;
   background-color: $color-bg-dark;
   box-shadow: $shadow-new-note;
+}
+.new-note-bar::placeholder {
+  color: $color-text-secondary;
 }
 </style>
