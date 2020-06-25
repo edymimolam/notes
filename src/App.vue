@@ -17,6 +17,24 @@ export default {
 };
 </script>
 
-<style>
-@import "./settings.css";
+<style lang="scss">
+@import "~normalize.css/normalize.css";
+@import "~@/design.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  color: $color-text-primary;
+  background-color: $color-bg-dark;
+  margin: 0;
+  padding: 0;
+  min-width: 360px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 </style>
