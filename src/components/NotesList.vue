@@ -10,7 +10,7 @@ import Note from "./Note";
 export default {
   name: "NotesList",
   data: () => ({
-    notes: Array.from({ length: 50 }, (v, i) => i)
+    notes: Array.from({ length: 50 }, (v, i) => `${i}`)
   }),
   components: { Note }
 };
