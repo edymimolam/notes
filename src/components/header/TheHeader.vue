@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper">
+  <div class="header-wrapper">
     <header class="header">
-      <div class="container">
+      <div class="search-bar-wrapper">
         <SearchBar />
       </div>
     </header>
@@ -12,7 +12,6 @@
 <script>
 import SearchBar from "./SearchBar";
 export default {
-  name: "AppHeader",
   components: { SearchBar }
 };
 </script>
@@ -27,7 +26,7 @@ export default {
   background-color: $color-bg-dark;
   box-shadow: $shadow-header;
 }
-.container {
+.search-bar-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;

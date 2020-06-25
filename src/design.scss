@@ -2,7 +2,8 @@
 * === FONTS ===
 */
 
-$font-family: Roboto,Arial,sans-serif;
+$font-family-content: Montserrat,Roboto,Arial,sans-serif;
+$font-family-secondary: Roboto,Arial,sans-serif;
 
 $font-weight-medium: 500;
 
@@ -44,14 +45,20 @@ $shadow-new-note:
 */
 
 $size-header-height: 4rem;
-
-$size-inputs-height: 2.875rem;;
-$size-input-padding: 0.75rem 1rem;
-$size-inputs-border-radius: 0.5rem;
-
+$size-bar-height: 2.875rem;
 $size-search-bar-width: 44rem;
+$size-new-note-bar-width: 36rem;
+$size-new-note-bar-margin: 2rem auto;
 
-$size-new-note-width: 36rem;
+$size-field-padding-x: 0.75rem; 
+$size-field-padding-y: 1rem; 
+$size-field-padding: $size-field-padding-x $size-field-padding-y;
+$size-field-border-radius: 0.5rem;
+
+$size-content-width-max: 60rem;
+$size-content-width-min: 20rem;
+
+$size-grid-gap: 1rem;
 
 
 

@@ -1,19 +1,32 @@
 <template>
-  <ul>
-    <Note v-for="note of notes" :key="note" :text="note" />
+  <ul class="notes-grid">
+    <Note
+      v-for="note of notes"
+      :key="note.id"
+      :title="note.title"
+      :text="note.text"
+    />
   </ul>
 </template>
 
 <script>
 import Note from "./Note";
+import notes from "../../../notes.json";
 
 export default {
-  name: "NotesList",
   data: () => ({
-    notes: Array.from({ length: 50 }, (v, i) => `${i}`)
+    notes
   }),
   components: { Note }
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "~@/design.scss";
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $size-grid-gap;
+}
+</style>

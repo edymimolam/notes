@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <AppHeader />
+    <TheHeader />
     <NotesContainer />
   </div>
 </template>
 
 <script>
-import AppHeader from "./components/header/AppHeader";
+import TheHeader from "./components/header/TheHeader";
 import NotesContainer from "./components/notes/NotesContainer";
 
 export default {
   name: "App",
-  components: { AppHeader, NotesContainer }
+  components: { TheHeader, NotesContainer }
 };
 </script>
 
@@ -25,16 +25,8 @@ export default {
   box-sizing: border-box;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
-  padding: 0;
-}
-
 body {
-  font-family: $font-family;
+  font-family: $font-family-content;
   color: $color-text-primary;
   background-color: $color-bg-dark;
   margin: 0;
@@ -42,6 +34,21 @@ body {
   min-width: 360px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-family-secondary;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 :focus {

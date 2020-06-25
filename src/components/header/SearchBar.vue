@@ -1,6 +1,6 @@
 <template>
   <form>
-    <div class="container">
+    <div class="search-bar-container">
       <button class="buttons">Ok</button>
       <input class="search-field" type="text" placeholder="Search" />
       <button class="buttons">X</button>
@@ -8,32 +8,26 @@
   </form>
 </template>
 
-<script>
-export default {
-  name: "SearchBar"
-};
-</script>
-
 <style lang="scss" scoped>
 @import "~@/design.scss";
 
-.container {
+.search-bar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: $size-search-bar-width;
-  height: $size-inputs-height;
+  height: $size-bar-height;
+  padding: $size-field-padding;
+  border-radius: $size-field-border-radius;
   background-color: $color-bg-light;
-  border-radius: $size-inputs-border-radius;
-  padding: $size-input-padding;
 }
 .search-field {
-  background: transparent;
-  color: $color-text-primary;
-  border: none;
-  height: $size-inputs-height;
-  padding: $size-input-padding;
   width: 100%;
+  height: $size-bar-height;
+  padding: $size-field-padding;
+  color: $color-text-primary;
+  background: transparent;
+  border: none;
 }
 .search-field::placeholder {
   color: $color-text-primary;

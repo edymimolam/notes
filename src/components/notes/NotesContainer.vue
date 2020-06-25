@@ -1,27 +1,33 @@
 <template>
-  <div class="container">
-    <NewNote />
-    <NotesList />
+  <div class="content-wrapper">
+    <div class="content">
+      <NoteCreateBar />
+      <NotesList />
+    </div>
   </div>
 </template>
 
 <script>
-import NewNote from "./NewNote";
+import NoteCreateBar from "./NoteCreateBar";
 import NotesList from "./NotesList";
 
 export default {
-  name: "NotesContainer",
-  components: { NewNote, NotesList }
+  components: { NoteCreateBar, NotesList }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "~@/design.scss";
 
-.container {
+.content-wrapper {
+  border-top: $border;
+}
+
+.content {
   display: flex;
   flex-flow: column;
   align-items: center;
-  border-top: $border;
+  margin: 0 auto;
+  max-width: $size-content-width-max;
 }
 </style>
