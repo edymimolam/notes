@@ -16,6 +16,7 @@ $font-weight-medium: 500;
 $color-bg-dark: #202124;
 $color-bg-medium: #28292c;
 $color-bg-light: rgba(241, 243, 244, 0.24);
+$color-bg-air: rgba(232, 234, 237, 0.08);
 
 $color-border: #5f6368;
 
@@ -67,3 +68,4 @@ $size-grid-gap: 1rem;
 */
 
 $border: 1px solid $color-border;
+$transition-fast: background 0.1s ease-out;
