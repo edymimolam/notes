@@ -8,5 +8,6 @@
   padding: $size-general-padding;
   width: 100%;
   border: none;
+  background: transparent;
 }
 </style>

@@ -4,7 +4,7 @@
       <BaseButton>
         <BaseIcon name="search" />
       </BaseButton>
-      <input class="search-field" type="text" placeholder="Search" />
+      <BaseInput type="search" placeholder="Search" class="search-field" />
       <BaseButton>
         <BaseIcon name="times" />
       </BaseButton>
@@ -15,8 +15,9 @@
 <script>
 import BaseIcon from "../base/BaseIcon";
 import BaseButton from "../base/BaseButton";
+import BaseInput from "../base/BaseInput";
 export default {
-  components: { BaseIcon, BaseButton }
+  components: { BaseIcon, BaseButton, BaseInput }
 };
 </script>
 
@@ -28,18 +29,13 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: $size-search-bar-width;
-  height: $size-bar-height;
-  padding: $size-general-padding;
+  padding: 0 $size-general-padding-x;
   border-radius: $size-general-border-radius;
+  border: $border;
   background-color: $color-bg-light;
 }
 .search-field {
-  width: 100%;
-  height: $size-bar-height;
-  padding: $size-general-padding;
   color: $color-text-primary;
-  background: transparent;
-  border: none;
 }
 .search-field::placeholder {
   color: $color-text-primary;

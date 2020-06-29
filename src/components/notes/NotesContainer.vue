@@ -1,18 +1,18 @@
 <template>
   <div class="content-wrapper">
     <div class="content">
-      <NoteCreateBar />
+      <NoteCreate />
       <NotesList />
     </div>
   </div>
 </template>
 
 <script>
-import NoteCreateBar from "./NoteCreateBar";
+import NoteCreate from "./NoteCreate";
 import NotesList from "./NotesList";
 
 export default {
-  components: { NoteCreateBar, NotesList }
+  components: { NoteCreate, NotesList }
 };
 </script>
 
