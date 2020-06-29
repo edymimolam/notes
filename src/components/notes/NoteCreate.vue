@@ -1,13 +1,52 @@
 <template>
-  <div class="note-create-container">
-    <BaseInput class="note-create" placeholder="New Note..." type="text" />
-  </div>
+  <form
+    class="note-create-container"
+    @click="startEdit"
+    v-on-clickaway="finishEdit"
+    @submit.prevent="finishEdit"
+    @keyup.enter="finishEdit"
+  >
+    <BaseInput
+      v-model.trim="title"
+      v-show="isEditing"
+      class="note-create"
+      placeholder="Title"
+      type="text"
+    />
+    <BaseInput
+      v-model.trim="text"
+      class="note-create"
+      placeholder="New Note..."
+      type="text"
+    />
+  </form>
 </template>
 
 <script>
+import { mixin as clickaway } from "vue-clickaway";
 import BaseInput from "../base/BaseInput";
 
 export default {
+  mixins: [clickaway],
+  data: () => ({
+    title: "",
+    text: "",
+    isEditing: false
+  }),
+  methods: {
+    finishEdit() {
+      if (this.title || this.text) {
+        this.$store.dispatch("addNote", { title: this.title, text: this.text });
+        this.title = "";
+        this.text = "";
+      }
+
+      this.isEditing = false;
+    },
+    startEdit() {
+      this.isEditing = true;
+    }
+  },
   components: { BaseInput }
 };
 </script>
@@ -25,7 +64,7 @@ export default {
 }
 
 .note-create {
-  font-weight: inherit;
+  font-weight: $font-weight-medium;
   color: $color-text-primary;
 }
 .note-create::placeholder {

@@ -28,12 +28,13 @@ export default {
 }
 
 .note {
-  padding: $size-general-padding;
-  border-radius: $size-general-border-radius;
-  border: $border;
   display: flex;
   flex-flow: column;
   height: fit-content;
+  width: 100%;
+  padding: $size-general-padding;
+  border-radius: $size-general-border-radius;
+  border: $border;
 }
 
 .note-title {
