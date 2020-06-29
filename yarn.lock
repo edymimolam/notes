@@ -8027,6 +8027,11 @@ vue@^2.6.11:
   resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha1-dllNh31LEiNEBuhONSdcbVFBJcU=
 
+vuex@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.5.0.tgz#0a4bb83122a159dec64b63cc9372880812de8eae"
+  integrity sha512-LetLEGe9cgfjdBZnKq/FVe9XwiNsikK1VK4Oh0SPt5sir0apalnJEOc/0vAdJGOWLe0Z1uXS+ovvhD9OjjgrTw==
+
 watchpack-chokidar2@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npm.taobao.org/watchpack-chokidar2/download/watchpack-chokidar2-2.0.0.tgz?cache=0&sync_timestamp=1589640722705&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwatchpack-chokidar2%2Fdownload%2Fwatchpack-chokidar2-2.0.0.tgz#9948a1866cbbd6cb824dea13a7ed691f6c8ddff0"

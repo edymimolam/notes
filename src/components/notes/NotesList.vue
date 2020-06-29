@@ -11,12 +11,13 @@
 
 <script>
 import Note from "./Note";
-import notes from "../../../notes.json";
 
 export default {
-  data: () => ({
-    notes
-  }),
+  computed: {
+    notes() {
+      return this.$store.state.notes;
+    }
+  },
   components: { Note }
 };
 </script>
