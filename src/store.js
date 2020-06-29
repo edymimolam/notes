@@ -1,13 +1,14 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import notes from "../notes.json";
+
+const STORAGE_KEY = "edymimolam-notes-project";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== "production",
   state: {
-    notes
+    notes: JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "[]")
   },
   mutations: {
     addNote: (state, note) => state.notes.push(note)
@@ -23,5 +24,11 @@ export default new Vuex.Store({
   },
   getters: {
     allNotes: ({ notes }) => notes.slice().reverse()
-  }
+  },
+  plugins: [
+    store =>
+      store.subscribe((_mutation, { notes }) => {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(notes));
+      })
+  ]
 });
