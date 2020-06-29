@@ -11,19 +11,22 @@ export default new Vuex.Store({
     notes: JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "[]")
   },
   mutations: {
-    addNote: (state, note) => state.notes.push(note)
-  },
-  actions: {
-    addNote: ({ commit }, { title, text }) => {
-      commit("addNote", {
+    ADD_NOTE: (state, { title, text }) =>
+      state.notes.push({
         title,
         text,
         id: Date.now()
-      });
+      }),
+    EDIT_NOTE: (state, { id, ...note }) => {
+      let index = state.notes.findIndex(n => n.id === id);
+      let newNote = Object.assign({}, state.notes[index], note);
+
+      state.notes.splice(index, 1, newNote);
     }
   },
   getters: {
-    allNotes: ({ notes }) => notes.slice().reverse()
+    allNotes: ({ notes }) => notes.slice().reverse(),
+    noteById: ({ notes }) => id => notes.find(note => note.id === id)
   },
   plugins: [
     store =>

@@ -1,11 +1,6 @@
 <template>
   <ul class="notes-grid">
-    <Note
-      v-for="note of notes"
-      :key="note.id"
-      :title="note.title"
-      :text="note.text"
-    />
+    <Note v-for="note of notes" :key="note.id" :note="note" />
   </ul>
 </template>
 

@@ -36,7 +36,7 @@ export default {
   methods: {
     finishEdit() {
       if (this.title || this.text) {
-        this.$store.dispatch("addNote", { title: this.title, text: this.text });
+        this.$store.commit("ADD_NOTE", { title: this.title, text: this.text });
         this.title = "";
         this.text = "";
       }

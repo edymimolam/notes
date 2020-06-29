@@ -27,7 +27,7 @@ export default {
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin: 0 auto;
+  margin: 12rem auto;
   max-width: $size-content-width-max;
 }
 </style>

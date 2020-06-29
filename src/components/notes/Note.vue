@@ -1,22 +1,26 @@
 <template>
   <li class="note-container">
-    <article class="note">
-      <header class="note-title">{{ title }}</header>
-      <p class="note-text">{{ text }}</p>
+    <NoteEdit v-if="isEdit" @note-edited="isEdit = false" :id="note.id" />
+    <article class="note" @click="isEdit = true">
+      <header class="note-title">{{ note.title }}</header>
+      <p class="note-text">{{ note.text }}</p>
     </article>
   </li>
 </template>
 
 <script>
+import NoteEdit from "./NoteEdit";
+
 export default {
+  data: () => ({
+    isEdit: false
+  }),
   props: {
-    text: {
-      type: String
-    },
-    title: {
-      type: String
+    note: {
+      type: Object
     }
-  }
+  },
+  components: { NoteEdit }
 };
 </script>
 
