@@ -14,8 +14,8 @@
 .new-note-bar {
   width: $size-new-note-bar-width;
   height: $size-bar-height;
-  padding: $size-field-padding;
-  border-radius: $size-field-border-radius;
+  padding: $size-general-padding;
+  border-radius: $size-general-border-radius;
   border: $border;
   font-weight: $font-weight-medium;
   color: $color-text-primary;

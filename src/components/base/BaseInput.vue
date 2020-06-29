@@ -5,7 +5,7 @@
 <style lang="scss" scoped>
 @import "~@/design.scss";
 .input {
-  padding: $size-input-padding;
+  padding: $size-general-padding;
   width: 100%;
   border: none;
 }

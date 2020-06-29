@@ -28,8 +28,8 @@ export default {
 }
 
 .note {
-  padding: $size-field-padding;
-  border-radius: $size-field-border-radius;
+  padding: $size-general-padding;
+  border-radius: $size-general-border-radius;
   border: $border;
   display: flex;
   flex-flow: column;
@@ -37,6 +37,6 @@ export default {
 }
 
 .note-title {
-  padding: $size-field-padding-y 0;
+  padding: $size-general-padding-y 0;
 }
 </style>

@@ -28,6 +28,29 @@ $color-accent: #41331c;
 
 
 /*
+* === SIZES ===
+*/
+
+$size-content-width-max: 60rem;
+$size-content-width-min: 20rem;
+
+$size-grid-gap: 1rem;
+
+$size-general-padding-y: 0.75rem; 
+$size-general-padding-x: 1rem; 
+$size-general-padding: $size-general-padding-y $size-general-padding-x;
+
+$size-general-border-radius: 0.5rem;
+
+$size-header-height: 4rem;
+$size-bar-height: 2.875rem;
+$size-search-bar-width: 44rem;
+$size-note-create-width: 36rem;
+$size-note-create-margin: 2rem auto;
+
+
+
+/*
 * === SHADOWS ===
 */
 
@@ -35,31 +58,9 @@ $shadow-header:
   0 4px 5px 0 rgba(0,0,0,0.14), 
   0 1px 10px 0 rgba(0,0,0,0.12), 
   0 2px 4px -1px rgba(0,0,0,0.2);
-$shadow-new-note: 
+$shadow-note-create: 
   0 1px 2px 0 rgba(0,0,0,0.6), 
   0 2px 6px 2px rgba(0,0,0,0.302);
-
-
-
-/*
-* === SIZES ===
-*/
-
-$size-header-height: 4rem;
-$size-bar-height: 2.875rem;
-$size-search-bar-width: 44rem;
-$size-new-note-bar-width: 36rem;
-$size-new-note-bar-margin: 2rem auto;
-
-$size-field-padding-x: 0.75rem; 
-$size-field-padding-y: 1rem; 
-$size-field-padding: $size-field-padding-x $size-field-padding-y;
-$size-field-border-radius: 0.5rem;
-
-$size-content-width-max: 60rem;
-$size-content-width-min: 20rem;
-
-$size-grid-gap: 1rem;
 
 
 

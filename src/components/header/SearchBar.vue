@@ -29,14 +29,14 @@ export default {
   align-items: center;
   width: $size-search-bar-width;
   height: $size-bar-height;
-  padding: $size-field-padding;
-  border-radius: $size-field-border-radius;
+  padding: $size-general-padding;
+  border-radius: $size-general-border-radius;
   background-color: $color-bg-light;
 }
 .search-field {
   width: 100%;
   height: $size-bar-height;
-  padding: $size-field-padding;
+  padding: $size-general-padding;
   color: $color-text-primary;
   background: transparent;
   border: none;
