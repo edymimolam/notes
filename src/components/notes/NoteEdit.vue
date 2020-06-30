@@ -1,20 +1,23 @@
 <template>
   <div class="editor-wrapper" v-on="$listeners">
-    <form
+    <div
       class="editor-container"
       v-on-clickaway="finishEdit"
-      @submit.prevent="finishEdit"
       @keyup.enter="finishEdit"
     >
       <BaseInput class="editor-input editor-title" v-model="title" />
       <BaseInput class="editor-input" v-model="text" />
-    </form>
+      <div class="button-container">
+        <BaseButton @click="finishEdit">Close</BaseButton>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import { mixin as clickaway } from "vue-clickaway";
 import BaseInput from "../base/BaseInput";
+import BaseButton from "../base/BaseButton";
 
 export default {
   mixins: [clickaway],
@@ -25,6 +28,7 @@ export default {
   },
   methods: {
     finishEdit() {
+      console.log(this);
       this.$emit("note-edited");
     }
   },
@@ -52,7 +56,8 @@ export default {
     }
   },
   components: {
-    BaseInput
+    BaseInput,
+    BaseButton
   }
 };
 </script>
@@ -84,5 +89,10 @@ export default {
 }
 .editor-title {
   font-size: $font-size-title;
+}
+.button-container {
+  display: flex;
+  flex-flow: row-reverse;
+  padding: $size-general-padding;
 }
 </style>

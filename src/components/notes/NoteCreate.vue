@@ -19,12 +19,16 @@
       placeholder="New Note..."
       type="text"
     />
+    <div class="button-container" v-show="isEditing">
+      <BaseButton>Create</BaseButton>
+    </div>
   </form>
 </template>
 
 <script>
 import { mixin as clickaway } from "vue-clickaway";
 import BaseInput from "../base/BaseInput";
+import BaseButton from "../base/BaseButton";
 
 export default {
   mixins: [clickaway],
@@ -47,7 +51,7 @@ export default {
       this.isEditing = true;
     }
   },
-  components: { BaseInput }
+  components: { BaseInput, BaseButton }
 };
 </script>
 
@@ -56,6 +60,7 @@ export default {
 
 .note-create-container {
   margin: $size-note-create-margin-y auto;
+  /* padding: $size-general-padding; */
   width: $size-note-create-width;
   background-color: $color-bg-dark;
   border: $border;
@@ -69,5 +74,10 @@ export default {
 }
 .note-create::placeholder {
   color: $color-text-secondary;
+}
+.button-container {
+  display: flex;
+  flex-flow: row-reverse;
+  padding: $size-general-padding;
 }
 </style>

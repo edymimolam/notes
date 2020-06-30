@@ -1,11 +1,11 @@
 <template>
   <form>
     <div class="search-bar-container">
-      <BaseButton>
+      <BaseButton rounded large>
         <BaseIcon name="search" />
       </BaseButton>
       <BaseInput type="search" placeholder="Search" class="search-field" />
-      <BaseButton>
+      <BaseButton rounded large>
         <BaseIcon name="times" />
       </BaseButton>
     </div>
