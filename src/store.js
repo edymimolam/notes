@@ -8,6 +8,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   strict: process.env.NODE_ENV !== "production",
   state: {
+    searchQuery: "",
     notes: JSON.parse(window.localStorage.getItem(STORAGE_KEY) || "[]")
   },
   mutations: {
@@ -26,10 +27,16 @@ export default new Vuex.Store({
     REMOVE_NOTE: (state, { id }) => {
       let index = state.notes.findIndex(n => n.id === id);
       state.notes.splice(index, 1);
-    }
+    },
+    SET_SEARCH_QUERY: (state, newQuery) => (state.searchQuery = newQuery)
   },
   getters: {
     allNotes: ({ notes }) => notes.slice().reverse(),
+    foundNotes: ({ notes, searchQuery }) =>
+      notes.filter(
+        ({ text, title }) =>
+          title.includes(searchQuery) || text.includes(searchQuery)
+      ),
     noteById: ({ notes }) => id => notes.find(note => note.id === id)
   },
   plugins: [

@@ -10,7 +10,9 @@ import Note from "./Note";
 export default {
   computed: {
     notes() {
-      return this.$store.getters.allNotes;
+      return this.$store.state.searchQuery === ""
+        ? this.$store.getters.allNotes
+        : this.$store.getters.foundNotes;
     }
   },
   components: { Note }
