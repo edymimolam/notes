@@ -22,6 +22,10 @@ export default new Vuex.Store({
       let newNote = Object.assign({}, state.notes[index], note);
 
       state.notes.splice(index, 1, newNote);
+    },
+    REMOVE_NOTE: (state, { id }) => {
+      let index = state.notes.findIndex(n => n.id === id);
+      state.notes.splice(index, 1);
     }
   },
   getters: {

@@ -8,6 +8,7 @@
       <BaseInput class="editor-input editor-title" v-model="title" />
       <BaseInput class="editor-input" v-model="text" />
       <div class="button-container">
+        <BaseButton @click="removeNote">Delete</BaseButton>
         <BaseButton @click="finishEdit">Close</BaseButton>
       </div>
     </div>
@@ -27,8 +28,13 @@ export default {
     }
   },
   methods: {
+    removeNote() {
+      this.$store.commit("REMOVE_NOTE", this.note);
+    },
     finishEdit() {
-      console.log(this);
+      if (!this.text && !this.title) {
+        this.removeNote();
+      }
       this.$emit("note-edited");
     }
   },
@@ -92,7 +98,7 @@ export default {
 }
 .button-container {
   display: flex;
-  flex-flow: row-reverse;
+  justify-content: space-between;
   padding: $size-general-padding;
 }
 </style>
