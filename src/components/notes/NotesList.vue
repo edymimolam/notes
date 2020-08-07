@@ -24,7 +24,18 @@ export default {
 
 .notes-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: $size-grid-gap;
+}
+
+@media (min-width: 480px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .notes-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>

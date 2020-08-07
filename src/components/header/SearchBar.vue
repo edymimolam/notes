@@ -1,25 +1,27 @@
 <template>
-  <div @blur.capture="finishSearch" @focus.capture="startSearch">
-    <div :class="[{ active: isSearching }, 'search-bar-container']">
-      <BaseButton
-        class="search-buttons"
-        :disabled="isSearching"
-        rounded
-        large
-        @click="startSearch"
-      >
-        <BaseIcon name="search" />
-      </BaseButton>
-      <BaseInput
-        ref="search"
-        placeholder="Search"
-        class="search-field"
-        v-model="search"
-      />
-      <BaseButton class="search-buttons" v-show="isSearching" rounded large>
-        <BaseIcon name="times" />
-      </BaseButton>
-    </div>
+  <div
+    :class="[{ active: isSearching }, 'search-bar-container']"
+    @blur.capture="finishSearch"
+    @focus.capture="startSearch"
+  >
+    <BaseButton
+      class="search-buttons"
+      :disabled="isSearching"
+      rounded
+      large
+      @click="startSearch"
+    >
+      <BaseIcon name="search" />
+    </BaseButton>
+    <BaseInput
+      ref="search"
+      placeholder="Search"
+      class="search-field"
+      v-model="search"
+    />
+    <BaseButton class="search-buttons" v-show="isSearching" rounded large>
+      <BaseIcon name="times" />
+    </BaseButton>
   </div>
 </template>
 

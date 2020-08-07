@@ -23,8 +23,10 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 0 $size-general-padding-x;
   background-color: $color-bg-dark;
   box-shadow: $shadow-header;
+  z-index: 1;
 }
 .search-bar-wrapper {
   display: flex;

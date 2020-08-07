@@ -21,6 +21,7 @@ export default {
 
 .content-wrapper {
   border-top: $border;
+  padding: 0 $size-general-padding-x;
 }
 
 .content {

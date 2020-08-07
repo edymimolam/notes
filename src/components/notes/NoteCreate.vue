@@ -60,8 +60,8 @@ export default {
 
 .note-create-container {
   margin: $size-note-create-margin-y auto;
-  /* padding: $size-general-padding; */
-  width: $size-note-create-width;
+  width: 100%;
+  max-width: $size-note-create-width;
   background-color: $color-bg-dark;
   border: $border;
   border-radius: $size-general-border-radius;

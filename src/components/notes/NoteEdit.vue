@@ -77,6 +77,7 @@ export default {
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding: 0 $size-general-padding-x;
   display: flex;
   justify-content: center;
   align-items: center;
